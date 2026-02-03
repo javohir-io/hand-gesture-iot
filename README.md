@@ -17,12 +17,6 @@ This final-year project demonstrates a **smart, contactless interface** that all
 
 ---
 
-## 🖼️ Demo Preview
-
-![Demo Screenshot](https://github.com/user-attachments/assets/a1754ec2-0746-4499-9113-327430af8fe0)
-
----
-
 ## 🧠 System Overview
 
 1. A **webcam** captures the live video feed
