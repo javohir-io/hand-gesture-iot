@@ -129,13 +129,10 @@ You’re encouraged to contribute improvements in gesture recognition, cloud inf
 
 ---
 
-## 👥 Authors
+## 👥 Author
 
 * **Abduvahhobov Javohir** – Full-stack Development
   *(Python, OpenCV, MediaPipe, MQTT, ESP32 firmware, GCP VM setup, Dockerized Mosquitto broker)*
-
-* **Mansurxojayev Xojiakbar** – Hardware Setup
-  *(ESP32 wiring, LED connections, Circuit Wiring)*
 
 > Final Year Project — IoT Internship
 > Tashkent Turin Polytechnic University
