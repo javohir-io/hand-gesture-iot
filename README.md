@@ -1,4 +1,4 @@
-# ✋ Hand Gesture Controlled IoT System
+# Hand Gesture Controlled IoT System
 
 **Contactless smart-device control using Computer Vision, IoT, and Cloud-hosted MQTT**
 
