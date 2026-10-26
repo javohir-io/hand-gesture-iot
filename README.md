@@ -58,11 +58,11 @@ The result is a low-latency, privacy-respecting, and scalable proof of concept f
 ## 🏗️ System Architecture
 
 ```
-┌─────────────┐     ┌────────────────┐     ┌──────────────────┐     ┌─────────────┐
-│   Webcam    │────▶│  MediaPipe +   │────▶│   MQTT Client     │────▶│   Mosquitto  │
-│ (video feed)│     │  OpenCV (CV)   │     │ (paho-mqtt, pub)  │     │ Broker (GCP  │
-└─────────────┘     └────────────────┘     └──────────────────┘     │  + Docker)   │
-                                                                       └──────┬──────┘
+┌─────────────┐     ┌────────────────┐     ┌──────────────────┐        ┌─────────────┐
+│   Webcam    │────▶│  MediaPipe +   │────▶│   MQTT Client    │────▶ │   Mosquitto  │
+│ (video feed)│     │  OpenCV (CV)   │     │ (paho-mqtt, pub)  │       │ Broker (GCP  │
+└─────────────┘     └────────────────┘     └──────────────────┘        │  + Docker)   │
+                                                                        └──────┬──────┘
                                                                               │ subscribe
                                                                               ▼
                                                                       ┌───────────────┐
@@ -87,12 +87,12 @@ The result is a low-latency, privacy-respecting, and scalable proof of concept f
 ## 🛠️ Tech Stack
 
 | Layer            | Technology                                  |
-| ----------------- | -------------------------------------------- |
+| -----------------| ------------------------------------------- |
 | Computer Vision  | Python 3.11+, OpenCV, MediaPipe             |
 | Messaging        | MQTT (paho-mqtt), Eclipse Mosquitto         |
-| Firmware         | ESP32 (Arduino IDE / C++)                    |
-| Infrastructure   | Docker, Google Cloud Platform (Compute Engine) |
-| Circuit Design   | Fritzing                                     |
+| Firmware         | ESP32 (Arduino IDE / C++)                   |
+| Infrastructure   | Docker, Google Cloud Platform               |
+| Circuit Design   | Fritzing                                    |
 
 ---
 
@@ -206,7 +206,7 @@ A window will open showing the live camera feed with hand landmarks overlaid. De
 
 ---
 
-## ✋ Supported Gestures
+##  Supported Gestures
 
 | Gesture            | MQTT Topic (example)  | Action                  |
 | ------------------ | ---------------------- | ------------------------ |
@@ -222,8 +222,8 @@ A window will open showing the live camera feed with hand landmarks overlaid. De
 
 ## ⚙️ Configuration
 
-| Variable       | Location                    | Description                          |
-| -------------- | ---------------------------- | -------------------------------------- |
+| Variable       | Location                     | Description                           |
+| -------------- | ---------------------------- | ------------------------------------- |
 | `MQTT_BROKER`  | `gesture_control_mqtt.py`    | Public IP of the GCP broker VM        |
 | `MQTT_PORT`    | `gesture_control_mqtt.py`    | Default `1883`                        |
 | `ssid` / `password` | ESP32 sketch            | Wi-Fi credentials for the ESP32       |
